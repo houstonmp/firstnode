@@ -18,9 +18,15 @@ app.get('/cats', (req, res) => {
     res.send('MEOW!!')
 })
 
+app.post('/cats', (req, res) => {
+    res.send('Post request to /cats, this is different from a GET request!')
+})
+
 app.get('/dogs', (req, res) => {
     res.send('WOOF!!')
 })
+
+
 
 
 app.listen(3000, () => {
