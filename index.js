@@ -59,7 +59,9 @@ const path = require('path');
 const redditData = require('./data.json');
 
 app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, '/views')) //Sets the default directory name for /views folder
+app.set('views', path.join(__dirname, '/views')) //Sets the default directory name for /views folder based on absolute path to index.js
+
+app.use(express.static(path.join(__dirname, 'public'))); //Sets the default directory name for /public folder based on absolute path to index.js
 
 app.get('/', (req, res) => {
     // res.send("HI")
